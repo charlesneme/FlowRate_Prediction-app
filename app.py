@@ -20,7 +20,7 @@ import matplotlib.gridspec as gridspec
 
 # ── Page config ────────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="Volve Multi-Phase Flow Predictor",
+    page_title="Multi-Phase Flow Rate Predictor for Volve Field",
     page_icon="🛢️",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -64,12 +64,13 @@ WELL_NAMES = [
 ]
 
 # ── Header ─────────────────────────────────────────────────────────────────
-st.title("🛢️ Volve Field — Multi-Phase Flow Rate Predictor")
+st.title("🛢️ Multi-Phase Flow Rate Predictor for Volve Field Production")
 st.markdown(
     """
-    **Model:** Gradient Boosting Regressor &nbsp;|&nbsp;
-    **Dataset:** Equinor Volve Open Data (2007–2016) &nbsp;|&nbsp;
-    **Test R²:** Oil 0.943 · Gas 0.958 · Water 0.951
+    **Model Used:** Gradient Boosting Regressor &nbsp;|&nbsp;
+    **Dataset:** Equinor Volve Open Data &nbsp;|&nbsp;
+    **Designed by:** Charles James &nbsp;|&nbsp;
+   
     """
 )
 st.divider()
@@ -552,5 +553,5 @@ with tab_info:
     - **Period:** September 2007 – December 2016
     - **Wells:** 5 active production wells (NO 15/9-F-1C, F-11H, F-12H, F-14H, F-15D, F-5AH)
     - **Records used:** 6,863 (after filtering injection, zero-oil, and zero-hours rows)
-    - **Reference:** Eslami et al. (2025), SSRN preprint 5327348
+    
     """)
